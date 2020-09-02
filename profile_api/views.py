@@ -20,6 +20,7 @@ class UserProfileViewSet(viewsets.ModelViewSet):
 
     serializer_class = serializers.UserProfileSerializer
     queryset = models.UserProfile.objects.all()
+
     authentication_classes = (TokenAuthentication,)
     #permission_classes = (UpdateOwnProfile,)
     filter_backends = (filters.SearchFilter,)
@@ -30,10 +31,17 @@ class DonorProfileViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.DonorProfileSerializer
     queryset = models.DonorProfile.objects.all()
 
+    authentication_classes = (TokenAuthentication,)
+    filter_backends = (filters.SearchFilter,)
+    search_fields = ('first_name', 'last_name', 'phone_no', 'email')
 
 class PatientProfileViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.PatientProfileSerializer
     queryset = models.PatientProfile.objects.all()
+
+    authentication_classes = (TokenAuthentication,)
+    filter_backends = (filters.SearchFilter,)
+    search_fields = ('first_name', 'last_name', 'phone_no', 'email')
 
 
 class CustomObtainAuthToken(ObtainAuthToken):
@@ -49,6 +57,6 @@ class CustomObtainAuthToken(ObtainAuthToken):
             'token': token.key,
             'id': user.pk,
             'email': user.email,
-            'name': user.name,
-            'avatar': user.avatar,
+            'first_name': user.first_name,
+            'phone_no': user.phone_no,
         })

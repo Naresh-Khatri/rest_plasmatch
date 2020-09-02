@@ -48,11 +48,19 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
         return self.first_name + ' ' + self.last_name
 
 class DonorProfile(models.Model):
-
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    email       = models.EmailField(max_length=255, unique=True, default='')
+    first_name  = models.CharField(max_length=255, default='')
+    last_name   = models.CharField(max_length=255, default='')
+    dob         = models.CharField(max_length=15, default='')
+    age         = models.IntegerField(default=10)
+    gender      = models.CharField(max_length=1,default='M')
+    phone_no    = models.CharField(max_length=20, default='')
+    city        = models.CharField(max_length=50, default= 'New Delhi')
+    lat         = models.CharField(max_length=20, default='')
+    lng         = models.CharField(max_length=20, default='')
 
     diabetes            = models.BooleanField(default=False)
-    lungs               = models.BooleanField(default=False)
+    lung               = models.BooleanField(default=False)
     kidney              = models.BooleanField(default=False)
     high_bp             = models.BooleanField(default=False)
     liver               = models.BooleanField(default=False)
@@ -65,8 +73,16 @@ class DonorProfile(models.Model):
 
 
 class PatientProfile(models.Model):
-
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    email       = models.EmailField(max_length=255, unique=True, default='')
+    first_name  = models.CharField(max_length=255, default='')
+    last_name   = models.CharField(max_length=255, default='')
+    dob         = models.CharField(max_length=15, default='')
+    age         = models.IntegerField(default=10)
+    gender      = models.CharField(max_length=1,default='M')
+    phone_no    = models.CharField(max_length=20, default='')
+    city        = models.CharField(max_length=50, default= 'New Delhi')
+    lat         = models.CharField(max_length=20, default='')
+    lng         = models.CharField(max_length=20, default='')
 
     hospital_name       = models.CharField(max_length=255)
     blood_type          = models.CharField(max_length=3)
