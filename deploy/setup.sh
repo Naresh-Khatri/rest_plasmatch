@@ -5,7 +5,7 @@ set -e
 # TODO: Set to URL of git repo.
 PROJECT_GIT_URL='https://github.com/Naresh-Khatri/rest_plasmatch.git'
 
-PROJECT_BASE_PATH='/usr/local/apps/profiles-rest-api'
+PROJECT_BASE_PATH='/usr/local/apps/rest_plasmatch'
 
 echo "Installing dependencies..."
 apt-get update
