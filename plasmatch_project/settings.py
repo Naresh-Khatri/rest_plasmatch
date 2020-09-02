@@ -123,6 +123,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+
 CORS_ORIGIN_WHITELIST = 'http://localhost:8080',
 
 AUTH_USER_MODEL = 'profile_api.UserProfile'
