@@ -44,6 +44,11 @@ class PatientProfileViewSet(viewsets.ModelViewSet):
     search_fields = ('first_name', 'last_name', 'phone_no', 'email')
 
 
+class MessageViewSet(viewsets.ModelViewSet):
+    serializer_class = serializers.MessageSerializer
+    queryset = models.Message.objects.all()
+
+
 class CustomObtainAuthToken(ObtainAuthToken):
 
     renderer_classes = api_settings.DEFAULT_RENDERER_CLASSES

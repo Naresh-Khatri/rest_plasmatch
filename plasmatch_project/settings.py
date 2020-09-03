@@ -25,7 +25,7 @@ SECRET_KEY = '6t+x@jug_s0y8z-6f82!-+u#&63o%1t(ur^y5oqr)l1af#x7^1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(int(os.environ.get('DEBUG', 1)))
 
-ALLOWED_HOSTS = ['147.139.30.244', 'stage2.plasmatch.in']
+ALLOWED_HOSTS = ['147.139.30.244', 'stage2.plasmatch.in', '127.0.0.1']
 
 
 # Application definition

@@ -9,6 +9,7 @@ router = routers.DefaultRouter()
 router.register('profile', views.UserProfileViewSet)
 router.register('DonorProfile', views.DonorProfileViewSet)
 router.register('PatientProfile', views.PatientProfileViewSet)
+router.register('SendMessage', views.MessageViewSet)
 
 
 urlpatterns = [

@@ -87,3 +87,8 @@ class PatientProfile(models.Model):
     hospital_name       = models.CharField(max_length=255)
     blood_type          = models.CharField(max_length=3)
     case_sheet_form     = models.BooleanField(default=True)
+
+class Message(models.Model):
+    name        = models.CharField(max_length=50, default='')
+    email       = models.EmailField(max_length=255, default='')
+    message    = models.CharField(max_length=1024)
