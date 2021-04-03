@@ -38,7 +38,7 @@ httptools==0.1.1
 hyperlink==20.0.1
 idna==2.10
 incremental==17.5.0
-ipython==7.16.1
+ipython==7.19.0
 ipython-genutils==0.2.0
 itypes==1.2.0
 jedi==0.18.0
@@ -51,7 +51,6 @@ parso==0.8.1
 pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==7.2.0
-pkg-resources==0.0.0
 prompt-toolkit==3.0.14
 ptyprocess==0.7.0
 pyasn1==0.4.8
