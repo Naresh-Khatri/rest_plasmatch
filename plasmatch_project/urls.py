@@ -23,6 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('profile_api.urls')),
 
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
+    # path('^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    # path('^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]
